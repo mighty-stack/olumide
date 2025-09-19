@@ -16,7 +16,7 @@ const Contact = () => {
     },
     {
       icon: '📱',
-      label: 'Phone',
+      label: 'Phone/Whatsapp',
       value: '+234 (816) 805-3286',
       link: 'tel:+2348168053286'
     },
