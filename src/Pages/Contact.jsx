@@ -90,10 +90,10 @@ const Contact = () => {
           <div className="row">
             <div className="col-12 text-center">
               <h1 className="contact-title">
-                Get In <span className="text-gradient">Touch</span>
+                Let’s <span className="text-gradient">Build</span> Together 
               </h1>
               <p className="contact-subtitle">
-                Ready to start your project? Let's discuss how we can work together to bring your vision to life.
+                I’m open to freelance projects, full-time opportunities, and collaborations. If you have an idea or project in mind, feel free to reach out!
               </p>
             </div>
           </div>

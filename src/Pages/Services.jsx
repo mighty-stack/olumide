@@ -33,7 +33,7 @@ const Services = () => {
       image: 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=500',
       technologies: ['React', 'Chart.js', 'Restful API', 'Express'],
       status: 'Completed',
-      duration: '2 months'
+      duration: '1 months'
     },
     {
       id: 3,
@@ -73,7 +73,7 @@ const Services = () => {
       category: 'Mobile Development',
       description: 'A complete food delivery ecosystem with customer, restaurant, and delivery partner apps, featuring real-time tracking.',
       image: 'https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=500',
-      technologies: ['React Native', 'Node.js', 'MongoDB', 'Socket.io'],
+      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
       status: 'Work in Progress',
       duration: '4 months'
     }
@@ -89,15 +89,15 @@ const Services = () => {
     {
       icon: '📱',
       title: 'WordPress Design',
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      features: ['React Native', 'Native Performance', 'App Store Deployment', 'Push Notifications']
+      description: 'I design and build professional, scalable, and easy-to-manage websites using WordPress',
+      features: ['Custom WordPress Websites','Theme Customization', 'Plugin Integration', 'E-commerce with Woocommerce',]
     },
-    {
-      icon: '🎨',
-      title: 'UI/UX Design',
-      description: 'User-centered design solutions that enhance user experience',
-      features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems']
-    },
+    // {
+    //   icon: '🎨',
+    //   title: 'UI/UX Design',
+    //   description: 'User-centered design solutions that enhance user experience',
+    //   features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems']
+    // },
     // {
     //   icon: '☁️',
     //   title: 'Cloud Solutions',

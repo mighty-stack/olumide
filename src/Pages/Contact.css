@@ -1,6 +1,11 @@
 /* Contact Hero */
 .contact-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/photo_2025-10-02_04-09-34.jpg);
+  /* linear-gradient(135deg, #667eea 0%, #764ba2 100%) */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overlay: rgba(0,0,0);
   color: white;
   text-align: center;
 }

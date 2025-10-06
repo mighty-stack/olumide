@@ -47,14 +47,10 @@ const About = () => {
                   About <span className="text-gradient">Me</span>
                 </h1>
                 <p className="about-description">
-                  I'm a passionate Full Stack Developer with 2 years of experience 
-                  in creating digital solutions that matter. I specialize in modern web 
-                  technologies and have a keen eye for design.
+                  I’m a passionate Fullstack Developer with experience building responsive, scalable, and performance-driven web applications. My core stack includes React, Node.js, Express, and MongoDB, with a strong focus on creating seamless user experiences and clean, maintainable code.
                 </p>
                 <p className="about-description">
-                  My journey started with a curiosity about how things work on the web, 
-                  and it has evolved into a career where I get to solve complex problems 
-                  and create beautiful, functional applications every day.
+                  Beyond coding, I enjoy problem-solving and working with teams to bring ideas to life. When I’m not coding, I explore new tech tools and design trends to sharpen my skills. My goal is to deliver software that not only works but also makes an impact.
                 </p>
                 <div className="about-highlights">
                   <div className="highlight-item">
