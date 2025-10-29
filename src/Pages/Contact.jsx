@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 import Button from '../Component/Button';
 import './Contact.css';
 
@@ -61,24 +62,34 @@ const Contact = () => {
       .oneOf([true], 'You must agree to the terms')
   });
 
-  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
-      setSubmitStatus('sending');
+
+      const response = await axios.post(
+        'https://builtbyben.onrender.com/contact', values,
+        {
+          headers: { 'Content-Type': 'application/json' },
+          timeout: 10000
+        }
+      );
       
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('sending')
       
-      console.log('Form submitted:', values);
-      setSubmitStatus('success');
-      resetForm();
-      
-      // Reset status after 5 seconds
-      setTimeout(() => setSubmitStatus(''), 5000);
+
+      if (response.data.success) {
+        console.log('Form submitted:', values)
+        setSubmitStatus('success')
+        resetForm()
+        setTimeout(() => setSubmitStatus(''), 5000)
+      } else {
+        setSubmitStatus('error');
+        console.error('Error response:', response.data)
+      }
     } catch (error) {
-      setSubmitStatus('error');
-      console.error('Form submission error:', error);
+      setSubmitStatus('error')
+      console.error('Form submission error:', error)
     } finally {
-      setSubmitting(false);
+      setSubmitting(false)
     }
   };
 
@@ -160,14 +171,14 @@ const Contact = () => {
                       {/* Status Messages */}
                       {submitStatus === 'success' && (
                         <div className="alert alert-success">
-                          <strong>✅ Success!</strong> Your message has been sent successfully. 
+                          <strong>Success!</strong> Your message has been sent successfully. 
                           I'll get back to you within 24 hours.
                         </div>
                       )}
                       
                       {submitStatus === 'error' && (
                         <div className="alert alert-error">
-                          <strong>❌ Error!</strong> Something went wrong. Please try again or 
+                          <strong> Error!</strong> Something went wrong. Please try again or 
                           contact me directly via email.
                         </div>
                       )}
